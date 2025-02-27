@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-
+/instruction.txt
 # production
 /build
 
