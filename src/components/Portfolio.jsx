@@ -20,13 +20,6 @@ const Portfolio = () => {
       </header>
 
       <section className="portfolio-section">
-        <h2>About Me</h2>
-        <p>
-          Hi, I'm a passionate Data Scientist with expertise in Machine Learning, Deep Learning, and AI.
-          I love working with data to extract meaningful insights and build innovative solutions.
-        </p>
-      </section>
-      <section className="portfolio-section">
         <h2>Projects</h2>
 
         {[
@@ -34,29 +27,73 @@ const Portfolio = () => {
             title: 'Website',
             id: 'web',
             projects: [
-              { id: "FarmConnect", description: "FarmConnect bridges the gap between local farmers and eco-conscious consumers through a real-time agricultural marketplace. This React-powered platform reduces food waste by 65% and food transportation emissions by 40% through features like bicycle-delivery coordination and AI-driven surplus redistribution." },
-              { id: 2, description: 'Description of the website project goes here.' }
+              {
+                id: "FarmersBuddy",
+                description: "Farmers Buddy bridges the gap between local farmers and eco-conscious consumers...",
+                link: "https://farmers-buddy-demo.com",
+                external: true,
+                image: "/assets/farmers-buddy.jpg",
+                alt: "Farmers Buddy Interface"       // Add alt text
+              },
+              {
+                id: "E-Commerce Analytics",
+                description: 'E-commerce analytics dashboard with real-time visualization',
+                link: "#web-project-2",
+                external: false,
+                image: "/assets/ecommerce-analytics.jpg",
+                alt: "Analytics Dashboard"
+              }
             ]
           },
           {
             title: 'Data Science',
             id: 'data-science',
             projects: [
-              { id: 1, description: 'Description of the data science project goes here.' },
-              { id: 2, description: 'Description of the data science project goes here.' }
+              {
+                id: 'Predictive Maintenance',
+                description: 'Predictive maintenance system for manufacturing equipment',
+                link: "https://github.com/yourusername/predictive-maintenance",
+                external: true,
+                image: "/assets/predictive-maintenance.jpg",
+                alt: "Industrial Equipment Analysis"
+              },
+              {
+                id: 'Customer Churn',
+                description: 'Customer churn prediction model for telecom company',
+                link: "#data-science-project-2",
+                external: false,
+                image: "/assets/churn-analysis.jpg",
+                alt: "Churn Prediction Model"
+              }
             ]
           },
           {
             title: 'Machine Learning & AI',
             id: 'ml-ai',
             projects: [
-              { id: 1, description: 'Description of the machine learning project goes here.' },
-              { id: 2, description: 'Description of the machine learning project goes here.' },
               {
-                id: 'colab',
-                description: 'A machine learning project hosted on Google Colab.',
-                link: 'https://colab.research.google.com/drive/18l_X5ppdH-5LXNILqqv9sevbuCQ1Wiu-?usp=sharing',
-                external: true
+                id: 'Quality Control AI',
+                description: 'Computer vision system for quality control in production lines',
+                link: "https://github.com/yourusername/quality-control-ai",
+                external: true,
+                image: "/assets/quality-control.jpg",
+                alt: "Computer Vision Inspection"
+              },
+              {
+                id: 'Feedback Analysis',
+                description: 'NLP-based customer feedback analysis system',
+                link: "#ml-ai-project-2",
+                external: false,
+                image: "/assets/nlp-analysis.jpg",
+                alt: "Sentiment Analysis Dashboard"
+              },
+              {
+                id: 'Object Detection',
+                description: 'Real-time object detection using TensorFlow Lite',
+                link: "https://colab.research.google.com/drive/18l_X5ppdH-5LXNILqqv9sevbuCQ1Wiu-?usp=sharing",
+                external: true,
+                image: "/assets/object-detection.jpg",
+                alt: "Object Detection Visualization"
               }
             ]
           }
@@ -70,53 +107,33 @@ const Portfolio = () => {
                   className="project-card"
                   whileHover={{ scale: 1.05 }}
                 >
-                  <h3>{`${category.title} Project ${project.id}`}</h3>
+                  {/* Image Container */}
+                  <div className="image-container">
+                    <img
+                      src={project.image}
+                      alt={project.alt}
+                      className="project-image"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <h3>{project.id}</h3>
                   <p>{project.description}</p>
-                  {project.external ? (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link"
-                    >
-                      View Project
-                    </a>
-                  ) : (
-                    <a
-                      href={`#${category.id}-project-${project.id}`}
-                      className="project-link"
-                    >
-                      View Details
-                    </a>
-                  )}
+                  <a
+                    href={project.link}
+                    className="project-link"
+                    {...(project.external ? {
+                      target: "_blank",
+                      rel: "noopener noreferrer"
+                    } : {})}
+                  >
+                    {project.external ? 'View Project' : 'View Details'}
+                  </a>
                 </motion.div>
               ))}
             </div>
           </div>
         ))}
-      </section>
-
-
-
-      <section className="portfolio-section">
-        <h2>Skills</h2>
-        <div className="skills-container">
-          {["Python", "TensorFlow", "Machine Learning", "Data Visualization", "Deep Learning"].map((skill) => (
-            <span key={skill} className="skill-badge">
-              {skill}
-            </span>
-          ))}
-        </div>
-      </section>
-
-      <section className="portfolio-section">
-        <h2>Contact</h2>
-        <p>
-          Feel free to reach out at{" "}
-          <a href="mailto:youremail@example.com" className="text-blue-500 dark:text-blue-300">
-            youremail@example.com
-          </a>
-        </p>
       </section>
 
       <footer className="footer">
