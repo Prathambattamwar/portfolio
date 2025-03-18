@@ -30,7 +30,7 @@ const Portfolio = () => {
               {
                 id: "FarmersBuddy",
                 description: "Farmers Buddy bridges the gap between local farmers and eco-conscious consumers...",
-                link: "https://farmers-buddy-demo.com",
+                link: "https://farmersbuddy.netlify.app/",
                 external: true,
                 image: "/assets/farmers-buddy.jpg",
                 alt: "Farmers Buddy Interface"       // Add alt text
