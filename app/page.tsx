@@ -40,7 +40,7 @@ export default function Portfolio() {
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2 font-bold">
             <span className="text-xl bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-500">
-              Jane Doe
+              Pratham Batamwar
             </span>
             <span className="hidden text-muted-foreground sm:inline-block">| Software Engineer</span>
           </div>
