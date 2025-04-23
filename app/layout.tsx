@@ -5,9 +5,9 @@ import { Toaster } from "@/components/ui/toaster"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Jane Doe | Software Engineer",
+  title: "Pratham Batamwar | Software Engineer",
   description: "Portfolio website of Jane Doe, a software engineer and full-stack developer.",
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
