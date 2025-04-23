@@ -332,10 +332,10 @@ export default function Portfolio() {
           <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
             <div className="flex flex-col items-center gap-2 md:items-start md:gap-1">
               <div className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-500">
-                Jane Doe
+                Pratham Batamwar
               </div>
               <p className="text-center text-sm text-muted-foreground md:text-left">
-                © {new Date().getFullYear()} Jane Doe. All rights reserved.
+                © {new Date().getFullYear()} Pratham Batamwar. All rights reserved.
               </p>
             </div>
             <div className="flex items-center gap-4">
