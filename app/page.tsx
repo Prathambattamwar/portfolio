@@ -134,10 +134,10 @@ export default function Portfolio() {
                 </div>
                 <div className="relative h-full w-full rounded-full overflow-hidden bg-background">
                   <Image
-                    src="/placeholder.svg?height=400&width=400"
+                    src="/photo.jpg?height=300&width=300"
                     alt="Pratham Batamwar"
-                    width={400}
-                    height={400}
+                    width={300}
+                    height={300}
                     className="h-full w-full object-cover"
                   />
                 </div>
