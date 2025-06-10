@@ -301,7 +301,7 @@ export default function Portfolio() {
                         <Github className="h-5 w-5" />
                       </div>
                       <a href="https://github.com/Prathambattamwar" target="_blank" rel="noreferrer" className="hover:underline">
-                        github.com/janedoe
+                        github.com/Prathambattamwar
                       </a>
                     </div>
                   </div>
